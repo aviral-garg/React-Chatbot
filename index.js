@@ -69,7 +69,7 @@ server.post('/api/messages', (req, res) => {
 });
 
 // Front-end
-server.get('/bot/*', restify.plugins.serveStatic({
+server.get('/*', restify.plugins.serveStatic({
     directory: __dirname,
     default: '/views/index.html'
 }));
