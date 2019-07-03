@@ -14,7 +14,7 @@ class QnABot extends DialogBot {
             const membersAdded = context.activity.membersAdded;
             for (let cnt = 0; cnt < membersAdded.length; cnt++) {
                 if (membersAdded[cnt].id !== context.activity.recipient.id) {
-                    await context.sendActivity(MessageFactory.text('Welcome to QnA Bot'));
+                    await context.sendActivity(MessageFactory.text('Welcome to LearReact-Bot'));
                 }
             }
 
