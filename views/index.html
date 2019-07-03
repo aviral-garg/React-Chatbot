@@ -32,10 +32,6 @@
             font-weight: normal !important;
             font-family: Arial, Helvetica, sans-serif !important;
         }
-
-        .ac-pushButton {
-            color: black !important;
-        }
     </style>
 </head>
 
@@ -43,8 +39,21 @@
     <div id="webchat" role="main"></div>
     <script>
         (async function () {
+            const styleOptions = {
+                backgroundColor: '#7F7772',
+                bubbleBackground: '#FEBD11',
+                bubbleBorder: 'solid 1px #FEBD11',
+                bubbleBorderRadius: 20,
+                bubbleFromUserBackground: 'white',
+                bubbleFromUserBorder: 'solid 1px white',
+                bubbleFromUserBorderRadius: 20,
+                bubbleFromUserTextColor: 'black',
+                bubbleTextColor: 'white'
+            };
+
             window.WebChat.renderWebChat({
-                directLine: window.WebChat.createDirectLine({ secret: '5slmIAo_Ibg.chFsL2Uo6SN8Lv8G33NXHPRQxv053Iw7CDr0NovKQww' })
+                directLine: window.WebChat.createDirectLine({ secret: '5slmIAo_Ibg.chFsL2Uo6SN8Lv8G33NXHPRQxv053Iw7CDr0NovKQww' }),
+                styleOptions
             }, document.getElementById('webchat'));
             document.querySelector('#webchat > *').focus();
         })().catch(err => console.error(err));
