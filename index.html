@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <title>LearnReactQnA-Chatbot</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.botframework.com/botframework-webchat/latest/webchat.js"></script>
+    <style>
+        html,
+        body {
+            height: 100%
+        }
+
+        body {
+            margin: 0
+        }
+
+        #webchat {
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="webchat" role="main"></div>
+    <script>
+        (async function () {
+            window.WebChat.renderWebChat({
+                directLine: window.WebChat.createDirectLine({ secret: '5slmIAo_Ibg.chFsL2Uo6SN8Lv8G33NXHPRQxv053Iw7CDr0NovKQww' })
+            }, document.getElementById('webchat'));
+        })().catch(err => console.error(err));
+    </script>
+</body>
+
+</html>
